@@ -11,6 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp://189.19.71.20
+        server: 189.19.71.20
         username: projectx
         password: Lucas102030@
+        port: 33
