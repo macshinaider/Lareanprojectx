@@ -15,4 +15,5 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local_dir: "./public_html"
+          INPUT_REMOTE_DIR: "./public_html"
           delete: "false"
