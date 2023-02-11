@@ -1,20 +1,9 @@
-on:
-  push:
-    branches:
-      - main
-name: 🚀 Deploy website on push
-jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with:
-        server: ${{ secrets.ftp_host }}
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: ./
+uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+with:
+  ftp_host: ${{ secrets.FTP_HOST }}
+  ftp_username: ${{ secrets.FTP_USERNAME }}
+  ftp_password: ${{ secrets.FTP_PASSWORD }}
+  local_source_dir: "Produção"
+  dist_target_dir: "Produção"
+  delete: "true"
+  exclude: "'^logs/' '^README.md'"
