@@ -18,4 +18,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: 33
+        local_dir: /home/deploy/phpdocker/public
         
