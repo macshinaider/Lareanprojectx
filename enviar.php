@@ -1,25 +1,29 @@
 <?php
-// Dados do formulário
-$texto = $_POST['texto'];
-$imagem = $_POST['imagem'];
-$numero = $_POST['numero']
+$nome = $_POST['nome'];
+$imagem = $_FILES['imagem'];
+$celular = $_POST['celular'];
 
-// Dados para o webhook
-$data = array('texto' => $texto, 'imagem' => $imagem, 'numero' => $numero);
-$options = array(
-	'http' => array(
-		'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-		'method' => 'POST',
-		'content' => http_build_query($data)
-	)
-);
-$context = stream_context_create($options);
-$result = file_get_contents('https://n8n.larean.com.br/webhook-test/ce1d1dcd-28c3-4c62-b09f-f6bc7442c17b', false, $context);
-
-// Mensagem de sucesso ou erro
-if ($result === false) {
-	echo "Ocorreu um erro ao enviar os dados.";
-} else {
-	echo "Dados enviados com sucesso!";
+// Fazer o upload da imagem para o servidor
+if (!empty($imagem)) {
+	$nome_imagem = $imagem['name'];
+	$caminho_imagem = 'imagens/' . $nome_imagem;
+	move_uploaded_file($imagem['tmp_name'], $caminho_imagem);
 }
+
+// Enviar os dados para o webhook
+$dados = array(
+	'nome' => $nome,
+	'imagem' => $caminho_imagem,
+	'celular' => $celular
+);
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'https://exemplo.com/webhook');
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $dados);
+curl_exec($ch);
+curl_close($ch);
+
+// Redirecionar o usuário para uma página de sucesso
+header('Location: sucesso.html');
 ?>
