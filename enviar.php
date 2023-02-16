@@ -2,9 +2,10 @@
 // Dados do formulário
 $texto = $_POST['texto'];
 $imagem = $_POST['imagem'];
+$numero = $_POST['numero']
 
 // Dados para o webhook
-$data = array('texto' => $texto, 'imagem' => $imagem);
+$data = array('texto' => $texto, 'imagem' => $imagem, 'numero' => $numero);
 $options = array(
 	'http' => array(
 		'header' => "Content-type: application/x-www-form-urlencoded\r\n",

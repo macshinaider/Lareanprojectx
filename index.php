@@ -11,6 +11,9 @@
 		<br><br>
 		<label for="imagem">Insira uma URL de imagem:</label>
 		<input type="text" id="imagem" name="imagem" required>
+        <label for="numero">Digite um número:</label>
+		<input type="number" id="numero" name="numero" required>
+		<br><br>
 		<br><br>
 		<input type="submit" value="Enviar">
 	</form>
