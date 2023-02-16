@@ -13,7 +13,7 @@
 		<input type="text" id="imagem" name="imagem" class="meu-input" required>
 		<label for="numero">Digite um número:</label>
 		<input type="number" id="numero" name="numero" class="meu-input" required>
-		<input type="submit" value="Enviar" class="meu-botao">
+		<input type="submit" value="enviar" class="meu-botao">
 	</form>
 </body>
 </html>
