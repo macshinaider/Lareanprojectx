@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<?php
+require_once "verificar_autenticacao.php";
+?>
 <head>
 	<title>Formulário de envio</title>
 	<link rel="stylesheet" href="style.css">
