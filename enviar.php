@@ -1,6 +1,6 @@
 <?php
 // URL do webhook
-$webhook_url = "https://n8n.larean.com.br/webhook-test/94a0ead2-277d-4a50-afa2-258b0770d626";
+$webhook_url = "https://n8n.larean.com.br/webhook/94a0ead2-277d-4a50-afa2-258b0770d626";
 
 // Dados do formulário
 $descricao = $_POST["descricao"];
