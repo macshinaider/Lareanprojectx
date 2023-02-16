@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-require_once "verificar_autenticacao.php";
+    require_once "verificar_autenticacao.php";
 ?>
 <head>
 	<title>Formulário de envio</title>
