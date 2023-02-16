@@ -5,13 +5,12 @@ $webhook_url = "https://n8n.larean.com.br/webhook-test/94a0ead2-277d-4a50-afa2-2
 // Dados do formulário
 $descricao = $_POST["descricao"];
 $imagem = $_FILES["imagem"];
-$numero = $_POST["numero"];
+
 
 // Preparando dados para enviar no webhook
 $data = array(
 	"descricao" => $descricao,
-	"imagem" => base64_encode(file_get_contents($imagem["tmp_name"])),
-	"numero" => $numero
+	"imagem" => base64_encode(file_get_contents($imagem["tmp_name"]))	
 );
 
 // Enviando dados via webhook
