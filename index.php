@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1 class="titulo">Formulário de envio!1</h1>
+		<h1 class="titulo">Formulário de envio!</h1>
 		<form action="enviar.php" method="post" enctype="multipart/form-data">
 			<label for="descricao">Descrição:</label>
 			<input type="text" name="descricao" required>
