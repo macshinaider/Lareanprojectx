@@ -18,7 +18,7 @@ $dados = array(
 );
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://exemplo.com/webhook');
+curl_setopt($ch, CURLOPT_URL, 'https://n8n.larean.com.br/webhook-test/94a0ead2-277d-4a50-afa2-258b0770d626');
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $dados);
 curl_exec($ch);
