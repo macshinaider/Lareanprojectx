@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Projeto Agendamento Olá</title>
-<meta charset="UTF-8">
+	<title>Formulário</title>
 </head>
 <body>
-
-<h1>em Desenvolvimento</h1>
-<p>Procurando equipe testes </p>
-
+	<h1>Formulário</h1>
+	<form method="post" action="enviar.php">
+		<label for="texto">Digite um texto:</label>
+		<input type="text" id="texto" name="texto" required>
+		<br><br>
+		<label for="imagem">Insira uma URL de imagem:</label>
+		<input type="text" id="imagem" name="imagem" required>
+		<br><br>
+		<input type="submit" value="Enviar">
+	</form>
 </body>
 </html>
